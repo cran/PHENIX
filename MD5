@@ -1,0 +1,17 @@
+e11c2231b2b60fac96f17ccfdd65bf9a *DESCRIPTION
+6318f4b71e312abbb4925a089d44dd48 *NAMESPACE
+a93a74b31993e78f840f9f8646616f23 *R/cor.par.R
+34e7d5ca24f2bf2f242e047d74e4be4e *R/int.R
+b043014fef25a25ea795a15c2bdc973a *R/int.boot.R
+83989172aa3e988c1191726d9351945d *R/intsc.R
+d555dcd7115061173ab0106cf16fefbc *R/intsc.boot.R
+2141a06b72b4646e91f77279f81d072c *data/paeonia.txt.gz
+ca70da928142d2256e68e2647ec726e9 *data/tussilago.txt.gz
+b744b207f592695fd3bb708d7a1c0000 *man/PHENIX-package.Rd
+1a108901fcd204af91441671a91dadd7 *man/cor.par.Rd
+5f4bf20c9faf10f5b930188601ec3f13 *man/int.Rd
+76d9c3740f56a27020778ba27b05ac27 *man/int.boot.Rd
+462cb1a73c8210a760e20f76e2bb843e *man/intsc.Rd
+6505002c82d63ed0df94afdad822b05b *man/intsc.boot.Rd
+ffac89cd3ca0ce39cc134d3073944030 *man/paeonia.Rd
+c602133701003ef585f2a50533e33707 *man/tussilago.Rd

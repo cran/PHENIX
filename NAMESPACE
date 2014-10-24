@@ -1,0 +1,2 @@
+importFrom(ppcor, pcor.test)
+export(int, int.boot, cor.par, intsc, intsc.boot)
