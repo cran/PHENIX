@@ -1,2 +1,3 @@
 importFrom(ppcor, pcor.test)
-export(int, int.boot, cor.par, intsc, intsc.boot)
+importFrom(SuppDists, rPearson)
+export(pint, pint.boot, pint.p, cor.par, pintsc, pintsc.boot, pintsc.p)

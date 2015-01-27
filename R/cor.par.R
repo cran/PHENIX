@@ -1,16 +1,18 @@
 cor.par <-
-function(traits, c.trait, trait.names=FALSE) {
+function(traits, c.trait, trait.names=FALSE, silent=FALSE) {
 
-  X<-traits
-  nas<-length(which(is.na(traits)))
+  X<-cbind(traits,c.trait)
+  nas<-length(unique(which(is.na(X),arr.ind=T)[,1]))
   if(nas>0)
 	{
+  if(silent==FALSE)
   warning(paste("Rows containing missing data (",nas, if(nas==1) " row", if(nas>1) " rows",") has been removed to perform the analysis",sep=""))
-  X<-na.exclude(traits)
+  X<-na.exclude(X)
 	}
+  traits<-X[,-ncol(X)]
+  z<-X[,ncol(X)]
 
   ntraits<-ncol(traits)
-  z<-c.trait
   r <- matrix(0, nrow = ntraits, ncol = ntraits)
   for (i in seq_len(ntraits)) {
     for (j in seq_len(i)) {
