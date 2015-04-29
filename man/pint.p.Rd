@@ -38,11 +38,11 @@ Harder, L.D. 2009. Questions about floral (dis)integration. New Phytologist 183:
 
 Ordano, M., Fornoni, J., Boege, K. & Domínguez, C.A. 2008. The adaptive value of phenotypic floral integration. New Phytologist 179:1183–1192.
 
-Wagner, G.P. 1984. On the eigenvalue distribution of genetic and phenotypic dispersion matrices: evidence for a nonrandom organization of quantitative character variation. Journal of Mathematical Biology 21:77–95.
+Wagner, G.P. 1984. On the eigenvalue distribution of genetic and phenotypic dispersion matrices: evidence for a non-random organization of quantitative character variation. Journal of Mathematical Biology 21:77–95.
 }
 \author{A.J. Muñoz-Pajares, R. Torices}
 
-\seealso{\code{\link{pint}}, \code{\link{pint.boot}}}
+\seealso{\code{\link{pint}}, \code{\link{pint.boot}}, \code{\link{pint.jack}}}
 
 \examples{
 

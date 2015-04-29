@@ -3,7 +3,7 @@
 \alias{PHENIX-package}
 \docType{package}
 \title{size-controlled phenotypic integration index}
-\description{PHENIX estimates a phenotypic integration index taking into account the size of the studied organ. For that, the magnitude of phenotypic integration between a set of traits in a population is quantified by the variance of the eigenvalues of the partial-correlation matrix (Torices & Méndez 2014). This partial-correlation matrix assess the correlation structure between all traits after controlling by the organ size. In addition, PHENIX also computes the integration values based on the correlation matrix between traits (Wagner 1984). Confidence intervals of both indices are calculated by bootstrapping and the statistical significance is calculated by simulating a null distribution.
+\description{PHENIX estimates a phenotypic integration index taking into account the size of the studied organ. For that, the magnitude of phenotypic integration between a set of traits in a population is quantified by the variance of the eigenvalues of the partial-correlation matrix (Torices & Méndez 2014). This partial-correlation matrix assess the correlation structure between all traits after controlling by the organ size. In addition, PHENIX also computes the integration values based on the correlation matrix between traits (Wagner 1984). Confidence intervals of both indices are calculated by bootstrapping and jackknife and the statistical significance is calculated by simulating a null distribution.
 }
 \details{
 \tabular{ll}{

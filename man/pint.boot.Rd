@@ -8,7 +8,7 @@
   \item{replicates}{a numeric, the number of randomizations (1000 by default)}
 }
 \details{Rows containing missing values are removed.}
-\value{A matrix with two columns and nine rows. Columns contain information for the uncorrected and corrected indices whereas rows contain mean, median, standard deviation (SD), standard error (SE), lower and higer confidence interval at 99\%, lower and higer confidence interval at 95\%, and the number of randomizations.}
+\value{A matrix with two columns and nine rows. Columns contain information for the uncorrected and corrected indices whereas rows contain mean, median, standard deviation (SD), standard error (SE), lower and higher confidence interval at 99\%, lower and higher confidence interval at 95\%, and the number of randomizations.}
 
 \references{
 Cheverud, J.M., Wagner, G.P. & Dow, M.M. 1989. Methods for the comparative analysis of variation patterns. Systematic Zoology 38:201–213
@@ -18,7 +18,7 @@ Pavlicev, M., Cheverud, J.M. & Wagner, G.P. 2009. Measuring morphological integr
 
 \author{R. Torices, A.J. Muñoz-Pajares}
 
-\seealso{\code{\link{pint}}, \code{\link{pint.p}}, \code{\link{pintsc.boot}}}
+\seealso{\code{\link{pint}}, \code{\link{pint.p}}, \code{\link{pintsc.boot}}, \code{\link{pint.jack}}}
 
 \examples{
 # Dataset from Torices & Méndez (2014)

@@ -15,7 +15,7 @@
 \seealso{\code{\link{pcor}}, \code{\link{pcor.test}}}
 \examples{
 # Dataset from Torices & Méndez (2014)
-# This data set represents the dry mass (in grames) of inflorescence components of the sunflower
+# This data set represents the dry mass (in grams) of inflorescence components of the sunflower
 # species Tussilago farfara. The inflorescences were dissected in 'SCAPE', 'RECEPTACLE', 'MALEFL'
 # (male flowers), 'OVAR' (reproductive part of female flowers), and 'RAYS' (the petaloid ray of
 # female flower). Furthermore in the last column the total weight of the inflorescence is added

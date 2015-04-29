@@ -24,14 +24,14 @@ Rows containing missing values are removed.}
 \item{PINTsc.c:}{Corrected phenotypic integration index.}
 \item{N:}{Number of observations used.}
 }
-\references{Torices, R. & Méndez, M. 2014. Resource allocation to inflorescence components is highly integrated despite differences between allocation currencies and aites. International Journal of Plant Science 175(6):713–723.}
+\references{Torices, R. & Méndez, M. 2014. Resource allocation to inflorescence components is highly integrated despite differences between allocation currencies and sites. International Journal of Plant Science 175(6):713–723.}
 \author{R. Torices, A.J. Muñoz-Pajares}
 
 \seealso{\code{\link{pint}}, \code{\link{pintsc.boot}}, \code{\link{pintsc.p}}}
 
 \examples{
 # Dataset from Torices & Méndez (2014)
-# This data set represents the dry mass (in grames) of inflorescence components of the sunflower
+# This data set represents the dry mass (in grams) of inflorescence components of the sunflower
 # species Tussilago farfara. The inflorescences were dissected in 'SCAPE', 'RECEPTACLE', 'MALEFL'
 # (male flowers), 'OVAR' (reproductive part of female flowers), and 'RAYS' (the petaloid ray of
 # female flower). Furthermore in the last column the total weight of the inflorescence is added

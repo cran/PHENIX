@@ -2,7 +2,7 @@
 \alias{pint}
 \title{Phenotypic integration index by Wagner}
 
-\description{Estimates phenotypic integration indices based on the variance of the eigenvalues of the correlatoin matrix between phenotypic traits following Wagner (1984).}
+\description{Estimates phenotypic integration indices based on the variance of the eigenvalues of the correlation matrix between phenotypic traits following Wagner (1984).}
 \usage{pint(traits)}
 \arguments{
   \item{traits}{a dataframe or a matrix object containing traits as columns and individuals as rows}
@@ -10,7 +10,7 @@
 
 \details{This function estimates the phenotypic integration index (PINT) using the correlation
 matrix following Wagner (1984), as well as a phenotypic integration index (PINT.c) corrected by the number
-of traits and individuals of each population. The uncorrected estimate is also expressed aspercentage 
+of traits and individuals of each population. The uncorrected estimate is also expressed as percentage 
 depending on the maximum possible integration levels.}
 
 \value{ A list with five elements containing:
@@ -28,11 +28,11 @@ Wagner, G.P. 1984. On the eigenvalue distribution of genetic and phenotypic disp
 }
 \author{R. Torices, A.J. Muñoz-Pajares}
 
-\seealso{\code{\link{pint.p}}, \code{\link{pint.boot}}, \code{\link{pintsc}}}
+\seealso{\code{\link{pint.p}}, \code{\link{pint.boot}}, \code{\link{pint.jack}}, \code{\link{pintsc}}}
 
 \examples{
 # Dataset from Torices & Méndez (2014)
-# This data set represents the dry mass (in grames) of inflorescence components of the sunflower
+# This data set represents the dry mass (in grams) of inflorescence components of the sunflower
 # species Tussilago farfara. The inflorescences were dissected in 'SCAPE', 'RECEPTACLE', 'MALEFL'
 # (male flowers), 'OVAR' (reproductive part of female flowers), and 'RAYS' (the petaloid ray of
 # female flower). Furthermore in the last column the total weight of the inflorescence is added

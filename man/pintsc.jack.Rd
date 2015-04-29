@@ -1,23 +1,23 @@
-\name{pintsc.boot}
-\alias{pintsc.boot}
-\title{size-controlled phenotypic integration bootstrap intervals}
-\description{This function estimates the confidence intervals of the phenotypic integration index controlling by a third variable using bootstrap.}
+\name{pintsc.jack}
+\alias{pintsc.jack}
+\title{size-controlled phenotypic integration jackknife resampling}
+\description{This function estimates the confidence intervals of the phenotypic integration index controlling by a third variable using jackknife resampling.}
 \usage{
-pintsc.boot(traits, control=NA, replicates = 1000)
+pintsc.jack(traits, control=NA, n.remove = 1)
 }
 
 \arguments{
   \item{traits}{a dataframe or a matrix object containing traits as columns and individuals as rows}
   \item{control}{a vector containing the variable to control by size.}
-  \item{replicates}{a numeric, the number of randomizations (1000 by default)}
+  \item{n.remove}{a numeric, the number of individuals to remove on every jackknife iteration}
 }
-\details{Rows containing missing values are removed.}
+\details{For every iteration, this function removes a given number of individuals before estimating phenotypic integration indices. Then, the process is repeated until all the possible combinations of this number of individuals have been removed. Rows containing missing values are removed.}
 
 \value{A matrix with two columns and nine rows. Columns contain information for the uncorrected and corrected indices whereas rows contain mean, median, standard deviation (SD), standard error (SE), lower and higher confidence interval at 99\%, lower and higher confidence interval at 95\%, and the number of randomizations.}
 
-\author{R. Torices, A.J. Muñoz-Pajares}
+\author{A.J. Muñoz-Pajares, R. Torices}
 
-\seealso{\code{\link{pintsc}}, \code{\link{pint.boot}}, \code{\link{pintsc.jack}}}
+\seealso{\code{\link{pintsc}}, \code{\link{pint.boot}}, \code{\link{pint.jack}}}
 
 \examples{
 # Dataset from Torices & Méndez (2014)
@@ -30,10 +30,6 @@ pintsc.boot(traits, control=NA, replicates = 1000)
 data(tussilago)
 
 # Iit is mandatory to define the "control" variable. Otherwise, it gives an error:
-# pintsc.boot(tussilago, 5000)
-pintsc.boot(traits=tussilago[,1:5], replicates=100, control=tussilago[,6])
-# The phenotypic integration index intervals do not include 0.
-# For faster execution, we used 100 replicates in this example.
-# For real data set increase this number:
-# pintsc.boot(traits=tussilago[,1:5], replicates=5000, control=tussilago[,6])
+# pintsc.jack(tussilago, 1)
+pintsc.jack(traits=tussilago[,1:5], control=tussilago[,6], 1)
 }

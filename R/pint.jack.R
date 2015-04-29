@@ -1,43 +1,39 @@
-pintsc.boot <-
-function (traits,control=NA,replicates=1000){
-  INT = list()
-  INTC = list()
+pint.jack <-
+function (traits,n.remove=1){
 
   X<-traits
-
-  if(is.na(control[1]))  stop("Undefined control trait!")
-  X<-cbind(traits,control)
   nas<-length(unique(which(is.na(X),arr.ind=T)[,1]))
- if(nas>0)
+  if(nas>0)
 	{
   warning(paste("Rows containing missing data (",nas, if(nas==1) " row", if(nas>1) " rows",") has been removed to perform the analysis",sep=""))
-  X<-na.exclude(X)
+  X<-na.exclude(traits)
 	}
 
-  Y<-replicates
+Nids<-nrow(X) # N. individuals excluding NA
+combi<-combn(Nids, (Nids-n.remove)) # N. 
+Npos<-ncol(combi) # N. possible combinations of individuals
+
+
+  Y<-Npos
+
+  INT = list()
+  INTC = list()
   length (INT) = Y
-
-  Z<-ncol(X)
-
   for (i in 1:Y){
-    t.sample<-X[sample(nrow(X), replace=TRUE),]
-    traits<-t.sample[,(1:ncol(X))[-Z]]
-    c.trait<-t.sample[,Z]
-    cor_X<-cor.par(traits, c.trait,silent=TRUE)
-    d <-eigen(cor_X, only.values=TRUE)$values
+    cor_X<-cor(X[combi[,i],])
+    d<-eigen(cor_X, only.values=TRUE)$values
     p <- length (d)
-
-    n <- nrow(t.sample) 
+    n <- nrow(X)
     Int<-sum((d-1)^2)/(p-1)
     INT[i]<-Int
-    Int.c<-(Int-((p-1)/n))
+	Int.c<-(Int-((p-1)/n))
     INTC[i]<-Int.c
 
-	if(i==1) cat("\nStarting bootstrap...........\n")
-	if(i==round(Y/4)) cat("\nPerforming bootstrap......25%\n")
-	if(i==round(Y/2)) cat("\nPerforming bootstrap......50%\n")
-	if(i==round(3*Y/4)) cat("\nPerforming bootstrap......75%\n")
-	if(i==Y) cat("\nBootstrap finished.......100%\n")
+	if(i==1) cat(paste("\nStarting jacknife (",Npos," combinations in total).....\n",sep=""))
+	if(i==round(Y/4)) cat("\nPerforming jacknife......25%\n")
+	if(i==round(Y/2)) cat("\nPerforming jacknife......50%\n")
+	if(i==round(3*Y/4)) cat("\nPerforming jacknife......75%\n")
+	if(i==Y) cat("\nJacknife finished.......100%\n")
 
   }
   Intphen1 <-as.numeric(INT)
@@ -52,8 +48,7 @@ function (traits,control=NA,replicates=1000){
   pref5="Higher IC 99% = "
   pref6="Lower IC 95% = "
   pref7="Higher IC 95% = "
- pref8="Number of replicates = "
-
+  pref8="Number of replicates = "
 
 #Igual que antes:
 names<-matrix(c(pref0,pref1,pref2,pref3,pref4,pref5,pref6,pref7,pref8))
@@ -83,7 +78,6 @@ length(INT)
 )
 )
 row.names(outs)<-names
-colnames(outs)<-c("PINTSC","PINTSC.C")
+colnames(outs)<-c("PINT","PINT.C")
 outs
-
 }

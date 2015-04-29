@@ -1,5 +1,5 @@
-pintsc.boot <-
-function (traits,control=NA,replicates=1000){
+pintsc.jack <-
+function (traits,control=NA,n.remove=1){
   INT = list()
   INTC = list()
 
@@ -14,13 +14,18 @@ function (traits,control=NA,replicates=1000){
   X<-na.exclude(X)
 	}
 
-  Y<-replicates
+	Nids<-nrow(X) # N. individuals excluding NA
+	combi<-combn(Nids, (Nids-n.remove)) # N. 
+	Npos<-ncol(combi) # N. possible combinations of individuals
+
+  Y<-Npos
   length (INT) = Y
+
 
   Z<-ncol(X)
 
   for (i in 1:Y){
-    t.sample<-X[sample(nrow(X), replace=TRUE),]
+    t.sample<-X[combi[,i],]
     traits<-t.sample[,(1:ncol(X))[-Z]]
     c.trait<-t.sample[,Z]
     cor_X<-cor.par(traits, c.trait,silent=TRUE)
