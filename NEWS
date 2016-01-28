@@ -3,6 +3,14 @@
 PHENIX 1.2
 =========
 
+Released Jan 28, 2016
+
+ .Includes manuscript citation for users
+
+=========
+PHENIX 1.2
+=========
+
 Released Apr 28, 2015
 
  .Includes a function to estimate significance of the integration index using jackknife. Contrasting with bootstrap, this method does not repeat observations, thus reducing biases on the covariance matrix.

@@ -17,6 +17,9 @@ License: \tab GPL-2\cr
 \author{R. Torices, A.J. Muñoz-Pajares
 
 Maintainer: A.J. Muñoz-Pajares to <ajesusmp@cibio.up.pt>
+}
 
+\references{
+R Torices, AJ Muñoz-Pajares (2015). PHENIX: An R package to estimate a size-controlled phenotypic integration index Applications in plant sciences 3 (5) DOI: 10.3732/apps.1400104
 }
 
