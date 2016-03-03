@@ -1,6 +1,6 @@
-b9aa36e2b210c43da957a8367bc7f4d4 *DESCRIPTION
+72e6f307c513d5d88b47639d147ea420 *DESCRIPTION
 2ffa5aa3debd9cca8c6743165d6b573a *NAMESPACE
-445fa08892925788f1d500e233ea8ce9 *NEWS
+3b425fecaf2653f267d6d61ce6e3263c *NEWS
 638e67f8a4a1c2b0f83ceb5f9fdf7058 *R/cor.par.R
 c688334758ddf861c1c98e3346245fda *R/pint.R
 1e4a841c8ecd7be61d4a67fd70f2e315 *R/pint.boot.R
@@ -12,6 +12,7 @@ b37b2b47979824e013c4181369342ca4 *R/pintsc.jack.R
 1ef4a517e63b31d1017a5a002ca0989c *R/pintsc.p.R
 2141a06b72b4646e91f77279f81d072c *data/paeonia.txt.gz
 ca70da928142d2256e68e2647ec726e9 *data/tussilago.txt.gz
+db764ee4ef1fa911ba0baefe8eaf7b06 *inst/CITATION
 d51fafe2c6f6a3f2bb6b32d2773b08a7 *man/PHENIX-package.Rd
 50a80237aaa05ead7659abf1f68a066e *man/cor.par.Rd
 01650d3a237144a8ba397af9719ca73a *man/paeonia.Rd
