@@ -10,7 +10,7 @@ int.cov <-function(cor_X,n){
 	eig_X<-eigen(cor_X, only.values=TRUE)$values
 	d <- eig_X
 	p <- length (d)
-	INT<-sum((d-1)^2)/(p-1)
+	INT<-sum((d-1)^2)/(p)
 	INT.c<-(INT-((p-1)/n))
 	pref="PINTsc = "
 	pref2="RelPINTsc = "

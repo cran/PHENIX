@@ -19,7 +19,7 @@ function(traits,control=NA){
   d <- eig_X
   p <- length (d)
   n <- nrow(X)
-  INT<-sum((d-1)^2)/(p-1)
+  INT<-sum((d-1)^2)/(p)
   INT.c<-(INT-((p-1)/n))
   pref="PINTsc = "
   pref2="RelPINTsc = "

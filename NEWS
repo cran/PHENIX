@@ -1,5 +1,13 @@
 
 =========
+PHENIX 1.3
+=========
+
+Released Apr 27, 2016
+
+ .Modifies integration estimation by dividing between the population variance instead of the sample variance.
+
+=========
 PHENIX 1.2.2
 =========
 

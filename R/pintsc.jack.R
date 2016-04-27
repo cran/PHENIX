@@ -33,7 +33,7 @@ function (traits,control=NA,n.remove=1){
     p <- length (d)
 
     n <- nrow(t.sample) 
-    Int<-sum((d-1)^2)/(p-1)
+    Int<-sum((d-1)^2)/(p)
     INT[i]<-Int
     Int.c<-(Int-((p-1)/n))
     INTC[i]<-Int.c

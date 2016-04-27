@@ -19,7 +19,7 @@ function (traits,replicates=1000){
     d<-eigen(cor_X, only.values=TRUE)$values
     p <- length (d)
     n <- nrow(X)
-    Int<-sum((d-1)^2)/(p-1)
+    Int<-sum((d-1)^2)/(p)
     INT[i]<-Int
 	Int.c<-(Int-((p-1)/n))
     INTC[i]<-Int.c
