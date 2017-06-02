@@ -3,13 +3,14 @@
 \title{size-controlled phenotypic integration jackknife resampling}
 \description{This function estimates the confidence intervals of the phenotypic integration index controlling by a third variable using jackknife resampling.}
 \usage{
-pintsc.jack(traits, control=NA, n.remove = 1)
+pintsc.jack(traits, control=NA, n.remove = 1, verbose=FALSE)
 }
 
 \arguments{
   \item{traits}{a dataframe or a matrix object containing traits as columns and individuals as rows}
   \item{control}{a vector containing the variable to control by size.}
   \item{n.remove}{a numeric, the number of individuals to remove on every jackknife iteration}
+  \item{verbose}{a logic, if TRUE, values obtained during the jackknife resampling are also reported.}
 }
 \details{For every iteration, this function removes a given number of individuals before estimating phenotypic integration indices. Then, the process is repeated until all the possible combinations of this number of individuals have been removed. Rows containing missing values are removed.}
 

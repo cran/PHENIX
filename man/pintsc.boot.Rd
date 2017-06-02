@@ -3,13 +3,14 @@
 \title{size-controlled phenotypic integration bootstrap intervals}
 \description{This function estimates the confidence intervals of the phenotypic integration index controlling by a third variable using bootstrap.}
 \usage{
-pintsc.boot(traits, control=NA, replicates = 1000)
+pintsc.boot(traits, control=NA, replicates = 1000, verbose=FALSE)
 }
 
 \arguments{
   \item{traits}{a dataframe or a matrix object containing traits as columns and individuals as rows}
   \item{control}{a vector containing the variable to control by size.}
-  \item{replicates}{a numeric, the number of randomizations (1000 by default)}
+  \item{replicates}{a numeric, the number of randomizations (1000 by default).}
+  \item{verbose}{a logic, if TRUE, values obtained during the bootstrap resampling are also reported.}
 }
 \details{Rows containing missing values are removed.}
 

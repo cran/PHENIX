@@ -1,5 +1,5 @@
 pintsc.boot <-
-function (traits,control=NA,replicates=1000){
+function (traits,control=NA,replicates=1000,verbose =FALSE){
   INT = list()
   INTC = list()
 
@@ -54,7 +54,6 @@ function (traits,control=NA,replicates=1000){
   pref7="Higher IC 95% = "
  pref8="Number of replicates = "
 
-
 #Igual que antes:
 names<-matrix(c(pref0,pref1,pref2,pref3,pref4,pref5,pref6,pref7,pref8))
 outs<-cbind(
@@ -84,6 +83,14 @@ length(INT)
 )
 row.names(outs)<-names
 colnames(outs)<-c("PINTSC","PINTSC.C")
-outs
 
+if(verbose==TRUE)
+	{
+	outs<-list(outs)
+	outs[[2]]<-Intphen1
+	outs[[3]]<-Intphen2
+	names(outs)<-c("Summary","Resampled PINTSC","Resampled PINTSC.C")
+	}
+
+outs
 }

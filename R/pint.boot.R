@@ -1,5 +1,5 @@
 pint.boot <-
-function (traits,replicates=1000){
+function (traits,replicates=1000,verbose =FALSE){
 
   X<-traits
   nas<-length(unique(which(is.na(X),arr.ind=T)[,1]))
@@ -74,5 +74,14 @@ length(INT)
 )
 row.names(outs)<-names
 colnames(outs)<-c("PINT","PINT.C")
+
+if(verbose==TRUE)
+	{
+	outs<-list(outs)
+	outs[[2]]<-Intphen1
+	outs[[3]]<-Intphen2
+	names(outs)<-c("Summary","Resampled PINT","Resampled PINT.C")
+	}
+
 outs
 }
